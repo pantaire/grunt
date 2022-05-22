@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/bg.jpg" type="Texture" id=1]
+[ext_resource path="res://ParallaxBackground.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource( 2 )
+
+[node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 708, 0 )
+
+[node name="Bg" type="Sprite" parent="ParallaxBackground/clouds"]
+position = Vector2( 355, 100 )
+texture = ExtResource( 1 )
